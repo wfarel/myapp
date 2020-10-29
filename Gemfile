@@ -9,6 +9,11 @@ gem 'rails', '~> 5.2.4', '>= 5.2.4.4'
 gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
+
+
+gem "json", ">= 2.3.0"
+
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -53,7 +58,7 @@ group :development do
   gem 'capistrano-rails', '~> 1.4'
   gem 'capistrano-passenger', '~> 0.2.0'
   gem 'capistrano-rbenv', '~> 2.1', '>= 2.1.4'
-  
+
 end
 
 group :test do
