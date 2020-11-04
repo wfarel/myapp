@@ -38,11 +38,19 @@
    margin-bottom: 30px;
  }
  .jumbotron {
-   background-color: #f4511e;
+   background-image: url("slides/img-two.jpg");
    color: #fff;
    padding: 100px 25px;
    font-family: Montserrat, sans-serif;
  }
+
+ .bg-cover {
+     background-attachment: static;
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+ }
+
  .container-fluid {
    padding: 60px 50px;
  }
