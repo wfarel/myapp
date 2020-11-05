@@ -1,0 +1,20 @@
+<div class="container margen">
+  <p id="notice"><%= notice %></p>
+
+  <p>
+    <strong>Nombre:</strong>
+    <%= @category.name %>
+  </p>
+
+  <p>
+    <strong>Descripción:</strong>
+    <%= @category.description %>
+  </p>
+
+  <p>
+    <%= image_tag @category.image.url(:medium) %>
+  </p>
+
+  <%= link_to 'Editar', edit_category_path(@category) %> |
+  <%= link_to 'Volver', categories_path %>
+</div>
