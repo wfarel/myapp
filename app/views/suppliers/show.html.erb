@@ -1,0 +1,21 @@
+<div class="container margen">
+  <p id="notice"><%= notice %></p>
+
+  <p>
+    <strong>Nombre:</strong>
+    <%= @supplier.nombre %>
+  </p>
+
+  <p>
+    <strong>Industria:</strong>
+    <%= @supplier.industria %>
+  </p>
+
+  <p>
+    <strong>Image:</strong>
+    <%= @supplier.image %>
+  </p>
+
+  <%= link_to 'Edit', edit_supplier_path(@supplier) %> |
+  <%= link_to 'Back', suppliers_path %>
+</div>

@@ -1,29 +1,13 @@
-<div id="proveedores" class="container-fluid text-center bg-grey">
-  <h2>PROVEEDORES</h2><br>
-  <h4>What we have created</h4>
-  <div class="row text-center slideanim">
-    <div class="col-sm-4">
-      <div class="thumbnail">
-        <%=image_tag("proveedores/cgr.jpg", alt:"CGR",  width:"50%")%>
-        <p><strong>GHINASSI</strong></p>
-        <p>Ind. Italiana</p>
-      </div>
-    </div>
-    <div class="col-sm-4">
-      <div class="thumbnail">
-        <%=image_tag("proveedores/ipd.jpg", alt:"IPD", width:"50%")%>
-        <p><strong>IPD</strong></p>
-        <p>Ind. Americana</p>
-      </div>
-    </div>
-    <div class="col-sm-4">
-      <div class="thumbnail">
-        <%=image_tag("proveedores/mahle.jpg", alt:"MAHLE", width:"50%")%>
-        <p><strong>MAHLE</strong></p>
-        <p>Ind. Brasilera</p>
-      </div>
-    </div>
-  </div><br>
+  <div id="proveedores" class="container-fluid text-center bg-grey">
+    <h2>PROVEEDORES</h2>
+    <h4>Trabajamos con marcas reconocidas de alta calidad.</h4>
+    <section class="customer-logos slider" data-slick='{"slidesToShow": 5}'>
+      <% @suppliers.each do |supplier| %>
+        <div class="slide"> <%= image_tag supplier.image.url, width:"50%" %></div>
+      <% end %>
+    </section>
+  </div>
+  <br>
 
   <h2>What our customers say</h2>
   <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
@@ -57,4 +41,29 @@
       <span class="sr-only">Siguiente</span>
     </a>
   </div>
-</div>
+
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+        $('.customer-logos').slick({
+            slidesToShow: 6,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 1500,
+            arrows: false,
+            dots: false,
+            pauseOnHover: false,
+            responsive: [{
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 4
+                }
+            }, {
+                breakpoint: 520,
+                settings: {
+                    slidesToShow: 3
+                }
+            }]
+        });
+    });
+  </script>
