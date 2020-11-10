@@ -13,7 +13,7 @@
   </div>
 </div>
 
-<div id="fotos_empresas" class="container-fluid text-center bg-imagen">
+<div id="fotos_empresas" class="container-fluid text-center bg-imagen" style="background-image: url(<%= asset_path 'about/about-bg.jpg'%>);">
   <section class="customer-logos slider" data-slick='{"slidesToShow": 5}'>
     <% @fotos_empresas.each do |fotos_empresa| %>
       <div class="slide"> <%= image_tag fotos_empresa.image.url, width:"50%", height:"200px" %></div>
