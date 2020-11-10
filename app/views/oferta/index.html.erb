@@ -1,0 +1,41 @@
+<div class="container margen">
+  <p id="notice"><%= notice %></p>
+
+  <h1>Oferta</h1>
+
+  <div class="table-responsive">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Titulo</th>
+          <th>Codigo</th>
+          <th>Imagen</th>
+          <th>Descripcion</th>
+          <th>Precio</th>
+          <th colspan="3"></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @oferta.each do |ofertum| %>
+          <tr>
+            <td><%= ofertum.titulo %></td>
+            <td><%= ofertum.codigo %></td>
+            <td><%= ofertum.imagen %></td>
+            <td><%= ofertum.descripcion %></td>
+            <td><%= ofertum.precio %></td>
+            <td><%= link_to 'Show', ofertum %></td>
+            <td><%= link_to 'Edit', edit_ofertum_path(ofertum) %></td>
+            <td><%= link_to 'Destroy', ofertum, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+
+
+  <br>
+
+  <%= link_to 'New Ofertum', new_ofertum_path %>
+
+</div>

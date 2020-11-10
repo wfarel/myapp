@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :oferta
+  resources :fotos_empresas
   resources :suppliers
   resources :categories
   get 'welcome/index'

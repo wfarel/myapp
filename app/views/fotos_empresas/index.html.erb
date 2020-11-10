@@ -1,0 +1,34 @@
+<div class="container margen">
+  <p id="notice"><%= notice %></p>
+
+  <h1>Fotos Empresas</h1>
+  <div class="table-responsive">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Image</th>
+          <th>Estado</th>
+          <th colspan="3"></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @fotos_empresas.each do |fotos_empresa| %>
+          <tr>
+            <td><%= fotos_empresa.name %></td>
+            <td><%= fotos_empresa.image %></td>
+            <td><%= fotos_empresa.estado %></td>
+            <td><%= link_to 'Show', fotos_empresa %></td>
+            <td><%= link_to 'Edit', edit_fotos_empresa_path(fotos_empresa) %></td>
+            <td><%= link_to 'Destroy', fotos_empresa, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+
+  <br>
+
+  <%= link_to 'New Fotos Empresa', new_fotos_empresa_path %>
+</div>

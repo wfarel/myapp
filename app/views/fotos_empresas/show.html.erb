@@ -1,0 +1,21 @@
+<div class="container margen">
+  <p id="notice"><%= notice %></p>
+
+  <p>
+    <strong>Name:</strong>
+    <%= @fotos_empresa.name %>
+  </p>
+
+  <p>
+    <strong>Image:</strong>
+    <%= @fotos_empresa.image %>
+  </p>
+
+  <p>
+    <strong>Estado:</strong>
+    <%= @fotos_empresa.estado %>
+  </p>
+
+  <%= link_to 'Edit', edit_fotos_empresa_path(@fotos_empresa) %> |
+  <%= link_to 'Back', fotos_empresas_path %>
+</div>

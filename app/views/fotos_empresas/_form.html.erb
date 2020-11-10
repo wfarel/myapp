@@ -1,0 +1,33 @@
+
+  <%= form_with(model: fotos_empresa, local: true, multipart: true) do |form| %>
+    <% if fotos_empresa.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(fotos_empresa.errors.count, "error") %> prohibited this fotos_empresa from being saved:</h2>
+
+        <ul>
+        <% fotos_empresa.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="field">
+      <%= form.label :name %>
+      <%= form.text_field :name %>
+    </div>
+
+    <div class="field">
+      <%= form.label :image %>
+      <%= form.file_field :image %>
+    </div>
+
+    <div class="field">
+      <%= form.label :estado %>
+      <%= form.check_box :estado %>
+    </div>
+
+    <div class="actions">
+      <%= form.submit %>
+    </div>
+  <% end %>
