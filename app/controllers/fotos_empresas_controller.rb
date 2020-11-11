@@ -1,4 +1,5 @@
 class FotosEmpresasController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_fotos_empresa, only: [:show, :edit, :update, :destroy]
 
   # GET /fotos_empresas
