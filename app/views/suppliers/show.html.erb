@@ -1,4 +1,4 @@
-<div class="container margen">
+<div class="container margen text-center">
   <p id="notice"><%= notice %></p>
 
   <p>
@@ -12,8 +12,7 @@
   </p>
 
   <p>
-    <strong>Image:</strong>
-    <%= @supplier.image %>
+    <%= image_tag @supplier.image.url(:medium) %>
   </p>
 
   <%= link_to 'Edit', edit_supplier_path(@supplier) %> |

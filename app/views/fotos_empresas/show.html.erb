@@ -1,4 +1,4 @@
-<div class="container margen">
+<div class="container margen text-center">
   <p id="notice"><%= notice %></p>
 
   <p>
@@ -7,8 +7,7 @@
   </p>
 
   <p>
-    <strong>Image:</strong>
-    <%= @fotos_empresa.image %>
+    <%= image_tag @fotos_empresa.image.url(:medium) %>
   </p>
 
   <p>
